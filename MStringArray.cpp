@@ -30,7 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 
-//v3.0 copyright Comine.com 20150810M1138
+//v3.1 copyright Comine.com 20210214U1159
 #include "MStdLib.h"
 #include "MString.h"
 #include "TVector.h"
@@ -178,14 +178,14 @@ bool MStringArray::Clear(void)
 
 
 /////////////////////////////////////////////////
-int MStringArray::GetCount(void)
+int MStringArray::GetCount(void) const
 	{
 	return mCount;
 	}
 
 
 /////////////////////////////////////////////////
-const char *MStringArray::GetString(int index)
+const char *MStringArray::GetString(int index) const
 	{
 	if(index<0 || index>=mCount)
 		{
@@ -193,13 +193,14 @@ const char *MStringArray::GetString(int index)
 		return "";
 		}
 
-	if(mList[index].Get()==NULL)
+	TAutoPtr<MString> &pmember=mList.Get(index);
+	if(pmember.Get()==NULL)
 		{
 		if(mNullStringsAllowed==true) { return NULL; }
 		return "";
 		}
 
-	return mList[index]->Get();
+	return pmember.Get()->Get();
 	}
 
 

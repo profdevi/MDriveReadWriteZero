@@ -156,7 +156,7 @@ static void GDisplayHelp(void)
 	{
 	MStdPrintf(	"\n"
 				"   usage:  %s [-?|-l] [-drive=<id> -count=<cnt>] \n"
-				"              [-read=<fileout>|-write=<filein>|-writezero]\n"
+				"              [-tofile=<file>|-todrive=<file>|-writezeros]\n"
 				"           v%s copyright Comine.com\n"
 				"\n"
 				"   WARNING: This program was meant to read/write/erase \n"

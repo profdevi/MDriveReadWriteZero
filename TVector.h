@@ -30,7 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 
-//v2.3 copyright Comine.com 20200603W2009
+//v2.4 copyright Comine.com 20210214U1151
 #ifndef TVector_h
 #define TVector_h
 
@@ -229,7 +229,7 @@ class TVector
 	#endif // NDEBUG
 
 	////////////////////////////////////////
-	inline Data Get(int index) const
+	inline Data & Get(int index) const
 		{
 		return mArray[index];
 		}

@@ -30,7 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 
-//v2.24 copyright Comine.com 20200721T0702
+//v2.24 copyright Comine.com 20201227U1506
 #ifndef MStdLib_h
 #define MStdLib_h
 

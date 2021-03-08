@@ -30,7 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 
-//v3.0 copyright Comine.com 20150810M1138
+//v3.1 copyright Comine.com 20210214U1159
 #ifndef MStringArray_h
 #define MStringArray_h
 
@@ -38,6 +38,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "MStdLib.h"
 #include "MString.h"
 #include "TVector.h"
+#include "MStringArray.h"
 #include "TAutoPtr.h"
 
 /////////////////////////////////////////////////
@@ -60,8 +61,8 @@ class MStringArray
 	bool Create(bool nullstrings=false);
 	bool Destroy(void);
 	bool Clear(void);									// Clear all the strings
-	int GetCount(void);									// Get Count in Array
-	const char *GetString(int index);					// Get String
+	int GetCount(void) const;							// Get Count in Array
+	const char *GetString(int index) const;				// Get String
 	bool SetString(int index,const char *string);		// Add string at position
 	bool SetString(const char *string);					// Add string to end
 	bool Remove(int index);								// Remove string at index
